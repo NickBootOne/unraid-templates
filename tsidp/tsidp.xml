@@ -1,1 +1,30 @@
-
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>tsidp</Name>
+  <Repository>ghcr.io/tailscale/tsidp:latest</Repository>
+  <Registry>https://hub.docker.com/r/tailscale/tsidp/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/tailscale/tsidp/</Support>
+  <Project>https://github.com/tailscale/tsidp</Project>
+  <Overview>tsidp is an OIDC / OAuth Identity Provider (IdP) server that integrates with your Tailscale network. It allows you to use Tailscale identities for authentication into applications that support OpenID Connect as well as authenticated MCP client / server connections.</Overview>
+  <Category>Productivity: Security: Other: Network:Privacy</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/tailscale-light.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1761927344</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/tsidp</Config>
+  <Config Name="TAILSCALE_USE_WIP_CODE" Target="TAILSCALE_USE_WIP_CODE" Default="" Mode="" Description="tsidp is experimental - needed while version " Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="TS_STATE_DIR" Target="TS_STATE_DIR" Default="" Mode="" Description="Store persistent tsnet and tsidp state" Type="Variable" Display="always" Required="false" Mask="false">/data</Config>
+  <Config Name="TS_HOSTNAME" Target="TS_HOSTNAME" Default="" Mode="" Description="Hostname on tailnet (becomes idp.your-tailnet.ts.net)" Type="Variable" Display="always" Required="false" Mask="false">idp</Config>
+  <Config Name="TSIDP_ENABLE_STS" Target="TSIDP_ENABLE_STS" Default="" Mode="" Description="Enable OAuth token exchange" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <TailscaleStateDir/>
+</Container>
